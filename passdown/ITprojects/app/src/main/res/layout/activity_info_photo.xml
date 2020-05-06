@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?><!--Artifact information-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.itprojects.activity.PostActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/photo_info_image"
+        android:src="@drawable/edit_action_bg" />
+
+    <ImageView
+        android:id="@+id/photo_info_image"
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/photo_info_bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignBottom="@id/photo_info_image"
+        android:background="@drawable/shape_detail_mask" />
+
+    <TextView
+        android:id="@+id/photo_info_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/fui_transparent"
+        android:fontFamily="@font/a"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:text="@string/activity_post_submit"
+        android:textColor="#eaeaea"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/photo_info_back"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/go_back"
+        android:text="@string/activity_post_back"
+        android:textColor="@color/greyColor" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/photo_info_image" />
+
+    <EditText
+        android:id="@+id/photo_info_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/photo_info_image"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:fontFamily="@font/b"
+        android:hint="@string/activity_post_title"
+        android:inputType="textMultiLine"
+        android:maxLines="2"
+        android:padding="15dp"
+        android:textColor="#4E3F34"
+        android:textSize="23sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/photo_info_title">
+
+        <EditText
+            android:id="@+id/photo_info_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:fontFamily="@font/b"
+            android:gravity="start"
+            android:hint="@string/activity_post_desc"
+            android:inputType="textMultiLine"
+            android:lineSpacingExtra="10dp"
+            android:paddingHorizontal="15dp"
+            android:textColor="#ab8d77"
+
+            />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_infoPhoto"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="108dp"
+        android:layout_height="79dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/photo_info_image">
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="私人"
+            android:textOff="公开"/>
+        <TextView
+            android:id="@+id/photo_info_privacy"
+            android:layout_width="wrap_content"
+            android:paddingTop="7dp"
+            android:layout_marginRight="2dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:text="公开"
+            android:layout_toLeftOf="@+id/switch2"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_alignBottom="@id/switch2"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

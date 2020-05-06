@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_detail"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="3"
+        android:background="@drawable/share_edit_bg">
+
+        <ImageView
+            android:id="@+id/fragment_home_newest_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+             />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shape_art_backgroud_black50"/>
+
+
+        <!--  android:src="@drawable/bottom_bar_shadow"-->
+
+        <TextView
+            android:id="@+id/fragment_home_newest_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/post_image"
+            android:layout_alignParentBottom="true"
+            android:text="@string/text_title"
+            android:textSize="22sp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="17dp"
+            android:fontFamily="@font/b"
+            android:textColor="@color/white_bg_ea"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="#fff"
+        >
+
+        <RelativeLayout
+            android:id="@+id/fragment_home_view_mid_text"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/fragment_home_mid_section_title"
+                android:textColor="@color/black_27"
+                android:fontFamily=""
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/fragment_home_view_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/fragment_home_view_all_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily=""
+                    android:text="@string/fragment_home_photos_s"
+                    android:textColor="#c79f62" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/fragment_home_view_all_text"
+                    android:src="@drawable/exhibit_press" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="-14dp"
+            android:id="@+id/fragment_home_images"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/fragment_home_view_mid_text">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/no_data_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+            <ImageView
+                android:layout_marginTop="40dp"
+                android:id="@+id/no_data_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="79dp"
+                android:src="@drawable/no_data"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/no_data_pic"
+                android:layout_marginTop="7dp"
+                android:layout_centerHorizontal="true"
+                android:text="暂无更多传家数据"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+    <RelativeLayout
+        android:id="@+id/fragment_home_desc_part"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_weight="3">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:visibility="gone"
+            android:background="@drawable/expo_title_bg"/>
+
+        <RelativeLayout
+            android:id="@+id/fragment_home_desc_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/fragment_home_desc_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/fragment_home_desc_s"
+                android:textColor="@color/black_27"
+                android:fontFamily=""
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/fragment_home_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/fragment_home_desc_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/golden_c7"
+                    android:text="@string/fragment_home_edit_s" />
+
+                <ImageView
+                    android:id="@+id/fragment_home_edit_pic"
+                    android:layout_width="23dp"
+                    android:layout_height="17dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="4dp"
+                    android:layout_toLeftOf="@id/fragment_home_desc_edit_text"
+                    android:src="@drawable/signin_normal_n" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/fragment_home_desc"
+            android:layout_marginHorizontal="15dp"
+            android:textColor="#7e7e7e"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragment_home_desc_top"
+            android:layout_marginTop="15dp"
+            android:background="@color/fui_transparent"
+            android:hint="@string/fragment_home_desc_edit_s"
+            android:letterSpacing="0.07"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

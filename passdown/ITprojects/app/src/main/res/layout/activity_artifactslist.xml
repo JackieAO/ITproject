@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--All artifacts are shown in vertical order-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/artifacts_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:id="@+id/artifacts_view_no_artifact"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="45dp"
+            android:src="@drawable/cloud_solid_light"/>
+
+        <ImageView
+            android:id="@+id/not_find_artifact_pic"
+            android:layout_width="120dp"
+            android:layout_height="170dp"
+            android:src="@drawable/not_find_artifact"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-7dp"
+            android:fontFamily="@font/a"
+            android:paddingTop="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/not_find_artifact_pic"
+            android:text="您还没有任何传家记录"/>
+    </RelativeLayout>
+
+</RelativeLayout>

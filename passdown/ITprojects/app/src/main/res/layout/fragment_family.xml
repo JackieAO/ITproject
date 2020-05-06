@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Display all family's PassDown-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/family_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/family_empty"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/not_find_artifact_pic"
+            android:layout_width="150dp"
+            android:layout_height="170dp"
+            android:src="@drawable/not_find_family"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/a"
+            android:layout_marginTop="-10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/not_find_artifact_pic"
+            android:text="您还没有添加任何家庭成员"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/family_out"
+        android:layout_below="@id/family_view"
+        android:layout_marginVertical="17dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/family_out_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="      已到底部      "
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+        <ImageView
+            android:layout_width="127dp"
+            android:layout_height="2px"
+            android:layout_centerVertical="true"
+            android:background="@color/colorPrimaryDark"
+            android:layout_toLeftOf="@+id/family_out_text"
+            />
+
+        <ImageView
+            android:layout_width="127dp"
+            android:layout_height="2px"
+            android:layout_centerVertical="true"
+            android:background="@color/colorPrimaryDark"
+            android:layout_toRightOf="@+id/family_out_text"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

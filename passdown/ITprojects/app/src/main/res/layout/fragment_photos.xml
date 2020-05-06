@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Display all artifacts-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="290dp"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="235dp"
+        android:id="@+id/no_artifact"
+        android:background="@drawable/mountain_4"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/not_find_artifact_pic"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/not_find_update"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-60dp"
+            android:paddingTop="100dp"
+
+            android:fontFamily="@font/a"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/not_find_artifact_pic"
+            android:text="@string/fragment_photos_no_artifact"/>
+
+    </RelativeLayout>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+</RelativeLayout>

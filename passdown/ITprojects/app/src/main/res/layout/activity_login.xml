@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Main login page-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_detail"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_pwd"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="60dp"
+        android:background="#D8BB81"
+        android:text="@string/activity_login_login"/>
+
+    <Button
+        android:id="@+id/btn_jump_to_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_login"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="20dp"
+        android:background="#ECD9B5"
+        android:text="@string/activity_login_signup">
+
+    </Button>
+
+    <ImageView
+        android:layout_alignTop="@id/login_email1"
+        android:layout_marginTop="43px"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginHorizontal="37dp"
+        android:background="@drawable/input_outline"
+        />
+
+
+    <ImageView
+        android:layout_alignTop="@id/login_pwd"
+        android:layout_marginTop="43px"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginHorizontal="37dp"
+        android:background="@drawable/input_outline"
+        />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/about_float_right2" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/about_float_left4" />
+
+
+    <ProgressBar
+        android:id="@+id/pb_log"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="108dp"
+        android:layout_height="79dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/forgetPwd"
+        android:layout_width="85dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/login_pwd"
+        android:layout_alignRight="@id/login_pwd"
+        android:background="@color/fui_transparent"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="5dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/activity_login_forgetpwd"
+        android:textColor="#9D9D9A" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/login_email1"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:textColor="@color/goldText"
+        android:textSize="19sp"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_pwd_2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/b"
+            android:paddingHorizontal="12dp"
+            android:background="@color/fui_transparent"
+            android:hint="@string/enter_pwd"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textColor="@color/goldText"
+            android:textSize="19sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_email1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/logo_char"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="40dp"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/goldText"
+        android:textSize="19sp"
+        android:hint="@string/enter_email"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_email_2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/b"
+            android:paddingHorizontal="12dp"
+            android:background="@color/fui_transparent"
+            android:inputType="textEmailAddress"
+            android:includeFontPadding="true"
+            android:paddingVertical="34px"
+            android:textColor="@color/goldText"
+            android:textSize="19sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+    <!--    Just Testing &#45;&#45; invisible-->
+    <ImageView
+        android:id="@+id/login_logo_pic"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/lock_solid"
+        android:visibility="visible"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logo_char"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:layout_below="@id/login_logo_pic"
+        >
+        <TextView
+            android:id="@+id/login_name_cn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="传家"
+            android:textSize="40sp"
+            android:fontFamily="@font/a"
+            android:textColor="#2d2719"
+
+            />
+        <TextView
+            android:layout_toRightOf="@id/login_name_cn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#2d2719"
+            android:fontFamily="@font/cinzel_bold"
+            android:text="PassDown"
+
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

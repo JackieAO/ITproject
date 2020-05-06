@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--One artifact's upload page-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.itprojects.activity.PostActivity">
+
+    <ImageView
+        android:layout_below="@id/imageSelect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/edit_action_bg"
+        />
+
+    <ImageView
+        android:id="@+id/imageSelect"
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="@string/activity_post_submit"
+        android:textSize="20sp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#eaeaea"
+        android:fontFamily="@font/a"
+        android:background="@color/fui_transparent"
+        android:layout_marginEnd="20dp"
+        android:shadowRadius="1"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        />
+
+
+    <ImageView
+        android:id="@+id/btn_back_to_log"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/go_back"
+        android:text="@string/activity_post_back"
+        android:textColor="@color/greyColor" />
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/imageSelect"
+        />
+
+    <EditText
+        android:id="@+id/titleField"
+        android:layout_below="@id/imageSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:textSize="23sp"
+        android:fontFamily="@font/b"
+        android:textColor="#4E3F34"
+        android:hint="@string/activity_post_title"
+        android:maxLines="2"
+        android:inputType="textMultiLine"
+        android:padding="15dp"
+        android:layout_marginBottom="10dp"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleField">
+        <EditText
+            android:id="@+id/descField"
+            android:gravity="start"
+            android:textColor="#ab8d77"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:hint="@string/activity_post_desc"
+            android:inputType="textMultiLine"
+            android:fontFamily="@font/b"
+            android:paddingHorizontal="15dp"
+            android:lineSpacingExtra="10dp"
+
+            />
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/pb_post"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="108dp"
+        android:layout_height="79dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageSelect">
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="私人"
+        android:textOff="公开"/>
+        <TextView
+            android:id="@+id/photo_info_privacy2"
+            android:layout_width="wrap_content"
+            android:paddingTop="7dp"
+            android:layout_marginRight="2dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:text="公开"
+            android:layout_toLeftOf="@+id/switch1"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_alignBottom="@id/switch1"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

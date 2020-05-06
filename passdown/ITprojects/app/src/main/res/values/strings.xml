@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">传家</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--common-->
+    <!-- Adjust hint font size - Yat Yeung   -->
+    <string name="enter_email"><font size="12">请输入电子邮箱</font></string>
+    <string name="enter_pwd"><font size="12">请输入密码</font></string>
+
+    <!--activity_forgetpwd.xml-->
+    <string name="activity_forgetpwd_send">发送邮件</string>
+
+    <!--activity_login.xml-->
+    <string name="activity_login_login">登陆</string>
+    <string name="activity_login_signup">没有账号？点此注册</string>
+    <string name="activity_login_forgetpwd">忘记密码?</string>
+
+    <!--activity_post.xml-->
+    <string name="activity_post_title">添加标题</string>
+    <string name="activity_post_desc">添加描述</string>
+    <string name="activity_post_submit">完成</string>
+    <string name="activity_post_back">返回</string>
+    <string name="activity_post_add_picture">点击添加照片</string>
+
+
+    <!--PostActivity.java-->
+    <string name="postActivity_addImage">添加图像</string>
+    <string name="postActivity_camera">相机</string>
+    <string name="postActivity_gallery">相册</string>
+    <string name="postActivity_cancel">取消</string>
+
+    <!--activity_register.xml-->
+    <string name="activity_register_signup">注册</string>
+    <string name="activity_register_lg">已有账号,返回登陆</string>
+    <string name="activity_register_surname">姓</string>
+    <string name="activity_register_firstname">名</string>
+    <string name="activity_register_pwdhint">密码（6-16个字符，区分大小写）</string>
+    <string name="activity_register_repwd">确认密码（请再次填写密码）</string>
+
+    <!--bottom_nav.xml-->
+    <string name="bottom_nav_home">主页</string>
+    <string name="bottom_nav_photos">动态</string>
+    <string name="bottom_nav_family">家人</string>
+    <string name="bottom_nav_profile">个人信息</string>
+
+    <!--note-->
+    <string name="background">背景</string>
+
+    <!--row_artifact.xml.xml-->
+    <string name="text_title">这里显示上传标题</string>
+    <string name="text_date">这里显示上传日期</string>
+    <string name="text_desc">这里显示上传描述</string>
+
+    <!--activity_info_photo.xmlhoto.xml-->
+    <string name="photo_info_edit">编辑</string>
+
+    <!--fragment_profile.xml-->
+    <string name="fragment_profile_edit">编辑</string>
+    <string name="fragment_profile_logout">退出</string>
+
+    <!--fragment_family.xml-->
+    <string name="fragment_profile_add_friend">找人</string>
+
+
+    <!--activity_search.xml-->
+    <string name="activity_search_email_hint">请在这输入要搜索的邮箱</string>
+
+    <!--fragment_photos.xml-->
+    <string name="fragment_photos_no_artifact">暂无任何更新动态</string>
+
+
+    <!--fragment_home.xml-->
+    <string name="fragment_home_photos_s">查看全部</string>
+    <string name="fragment_home_edit_s">编辑</string>
+    <string name="fragment_home_desc_edit_s">暂无简介</string>
+    <string name="fragment_home_desc_s">传家库简介</string>
+    <string name="fragment_home_mid_section_title">传家列表</string>
+    <string name="fragment_home_edit_f">编辑</string>
+
+</resources>

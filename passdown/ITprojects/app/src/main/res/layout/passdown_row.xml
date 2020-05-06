@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--One PassDown display for recycle view adapter-->
+<!--v1-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="170dp"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_marginTop="0dp"
+app:cardCornerRadius="0dp"
+android:layout_marginHorizontal="0dp">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/PassDown_firstPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_50"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+        <TextView
+            android:id="@+id/PassDown_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="传家库"
+            android:textColor="@color/white_bg_ea"
+            android:textSize="33sp"
+            android:fontFamily="@font/a"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PassDown_name"
+            android:layout_marginTop="7dp"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/PassDown_User_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="家人名字"
+                android:textColor="@color/white_bg_ea"
+                android:fontFamily="@font/a"
+                android:textSize="15sp"
+                />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        >
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/PassDown_avatar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_centerVertical="true"
+            app:civ_border_color="@color/transparent"
+            android:src="@drawable/avatar_bg"
+            android:background="@drawable/avatar_bg" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

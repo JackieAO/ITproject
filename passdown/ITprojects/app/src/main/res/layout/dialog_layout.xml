@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Display searched users-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <EditText
+        android:id="@+id/invited_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入邀请码"
+        android:layout_marginHorizontal="25dp"
+        android:layout_below="@+id/search_result"/>
+
+    <RelativeLayout
+        android:id="@+id/not_found_user_email"
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/dialog_cannot_find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您输入的用户不存在"
+                android:paddingTop="52dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="-14dp"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="-29dp"
+                android:layout_toEndOf="@id/dialog_cannot_find"
+                android:src="@drawable/cannot_find_user"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

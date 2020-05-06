@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--User's profile page-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_detail">
+
+    <RelativeLayout
+        android:id="@+id/fragment_profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        >
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/fragment_profile_avatar"
+            android:layout_width="145dp"
+            android:layout_height="145dp"
+            app:civ_border_color="@color/transparent"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/avatar_bg"
+            tools:srcCompat="@tools:sample/avatars" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/fragment_profile_avatar"
+            android:layout_centerHorizontal="true"
+            >
+
+            <EditText
+                android:id="@+id/fragment_profile_surName"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="姓"
+                android:layout_centerVertical="true"
+                android:textColorHint="#c7c7d1"
+                android:fontFamily="@font/a"
+                android:background="@color/fui_transparent"
+                android:textColor="#401c34"
+                android:textSize="44sp" />
+
+            <EditText
+                android:id="@+id/fragment_profile_firstName"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:inputType="textPersonName"
+                android:layout_toRightOf="@id/fragment_profile_surName"
+                android:layout_alignTop="@id/fragment_profile_surName"
+                android:hint="名"
+                android:textColorHint="#c7c7d1"
+                android:fontFamily="@font/a"
+                android:textColor="#401c34"
+                android:background="@color/fui_transparent"
+                android:layout_marginLeft="20dp"
+                android:textSize="44sp" />
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/fragment_profile_email_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/fragment_profile_name"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邮箱"
+            android:textStyle="bold"
+            android:textColor="#2c0c13"
+            android:textSize="17sp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/fragment_profile_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColorHint="#a4a5b9"
+            android:textColor="#a4a5b9"
+            android:hint="xxxxx@ourlook.com"
+            android:fontFamily=""
+            android:gravity="right"
+            android:inputType="textEmailAddress" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_profile_artifact_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_profile_email_layout"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="37dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="传家库名称"
+            android:textStyle="bold"
+            android:textColor="#2c0c13"
+            android:textSize="17sp"
+            android:layout_centerVertical="true"
+            />
+
+        <EditText
+            android:id="@+id/fragment_profile_artifact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="12"
+            android:hint='您的传家库'
+            android:textColor="#4f0a16"
+            android:textColorHint="#c7c7d1"
+            android:gravity="right"
+            android:background="@color/fui_transparent"
+            android:inputType="textPersonName" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/fragment_profile_code_layout"
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_profile_artifact_layout"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="邀请码"
+            android:textColor="#2c0c13"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fragment_profile_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily=""
+            android:gravity="right"
+            android:hint="000000"
+            android:inputType="textEmailAddress"
+            android:textColor="#a4a5b9"
+            android:textColorHint="#a4a5b9"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_below="@+id/fragment_profile_artifact_layout"
+        android:id="@+id/fragment_profile_edit"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/btn_gray_normal"
+        android:gravity="center"
+        android:text="@string/fragment_profile_edit"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/fragment_profile_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="37dp"
+        android:layout_below="@id/fragment_profile_artifact_layout"
+        android:layout_marginTop="105dp"
+        android:background="#D8BB81"
+        android:text="@string/fragment_profile_logout"
+        android:textSize="20sp"/>
+
+
+
+
+
+
+</RelativeLayout>
